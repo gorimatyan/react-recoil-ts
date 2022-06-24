@@ -1,16 +1,8 @@
 import React from 'react'
-import {
-    RecoilRoot,
-    atom,
-    selector,
-    useRecoilState,
-    useRecoilValue,
-  } from 'recoil';
+import { RecoilRoot, atom, selector, useRecoilState, useRecoilValue, useSetRecoilState, SetterOrUpdater, } from 'recoil';
+import { textState } from '../AtomFamily';
 
-const textState = atom({
-    key: 'textState', // unique ID (with respect to other atoms/selectors)
-    default: '', // default value (aka initial value)
-  });
+
 
 const CharacterCounter: React.FC = () => {
   return (
